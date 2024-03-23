@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio Website</title>
+        <!-- Include Font Awesome CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        
+        <header class="header"> 
+            <a href="#" class="logo">VINCE.</a>
+            <nav class="navbar">
+                <a href="#" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section class="home">
+            <div class="home-content">
+                <h1>HI! I'm Vince</h1>
+                <h2>Web Developer</h2>
+                <p>I am dependable and trustworthy for any assignment. I'm excited to talk about my experience and find out more about why I'm a good fit for the position. From Advance Institute of Technology, Inc. STEM, I received my diploma. And I'm pursuing a Bachelor of Industrial Technology with a Computer Technology Major at Cebu Technological University right now.</p>
+                <div class="btn-box">
+                    <a href="#">Hire Me</a>
+                    <a href="#">Let's Talk</a>
+                </div>
+            </div>
+
+            <div class="home-sci">
+                <a href="https://www.facebook.com/vince.lauron29" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/itss_kiddo11/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@vincelauron03" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+
+            <span class="home-imghover"></span>
+        </section>
+
+           <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me </h1>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Computer literate</span><br>(MS Word, MS Excel, MS PowerPoint, Autocad, C-Coding)</li>
+                            <li><span>Crew</span><br>Cooking</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023-CURRENT</span><br>Crew at McDonald's</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024</span><br>Cebu Technological University</li>
+                            <li><span>2022</span><br>Advance Institute of Technology, Inc.</li>
+                            <li><span>2020</span><br>Pajo National High School</li>
+                            <li><span>2016</span><br>Pajo Elementary School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services </h1>
+            <div class="services-list">
+                <h2>Computer literate</h2>
+                <p>(MS Word, MS Excel, MS PowerPoint, Autocad, C-Coding)</p>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Section -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><a href="mailto:Vincemlauron@gmail.com">Vincemlauron@gmail.com</a></p>
+                    <p><a href="tel:+639917573421">09917573421</a></p>
+                    <div class="social-icons">
+                <div class="contact-right"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            document.getElementById(tabname).classList.add("active-tab");
+            event.currentTarget.classList.add("active-link");
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+        
+    </body>
+</html>
